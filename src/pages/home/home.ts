@@ -47,7 +47,7 @@ export class HomePage {
   }
 
   goMaster() {
-    this.navCtrl.push(MasterPage);
+    this.navCtrl.push(MasterPage, { name: 'Ryan', age: 28 });
   }
 
   setRootPage() {

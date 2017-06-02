@@ -7,7 +7,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'master.html',
 })
 export class MasterPage {
-
+  name: string;
+  age: number;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -16,6 +17,9 @@ export class MasterPage {
   }
 
   ionViewDidLoad() {
+    this.name = this.navParams.get('name');
+    this.age = this.navParams.get('age');
+    
     console.log('ionViewDidLoad MasterPage');
   }
 

@@ -1,3 +1,4 @@
+import { MasterPage } from './../pages/master/master';
 import { HelloPage } from './../pages/hello/hello';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
@@ -24,7 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
-      { title: 'Hello', component: HelloPage }
+      { title: 'Hello', component: HelloPage },
+      { title: 'Master', component: MasterPage }
     ];
 
   }

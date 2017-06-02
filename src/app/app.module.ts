@@ -1,3 +1,4 @@
+import { MasterPage } from './../pages/master/master';
 import { HelloPage } from './../pages/hello/hello';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -15,7 +16,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    HelloPage
+    HelloPage,
+    MasterPage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     HomePage,
     ListPage,
-    HelloPage
+    HelloPage,
+    MasterPage
   ],
   providers: [
     StatusBar,

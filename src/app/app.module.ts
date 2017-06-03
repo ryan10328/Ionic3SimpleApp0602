@@ -17,6 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from '@angular/http';
 
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -33,6 +35,7 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     FormsModule,
     HttpModule,
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp, {}, {
       links: [
         { component: LoginPage, name: 'Login', segment: 'login' },

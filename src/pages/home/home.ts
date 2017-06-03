@@ -3,6 +3,8 @@ import { ListPage } from './../list/list';
 import { MasterPage } from './../master/master';
 import { Component } from '@angular/core';
 import { NavController, AlertController, NavParams, LoadingController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
+
 
 @Component({
   selector: 'page-home',
@@ -13,7 +15,8 @@ export class HomePage {
   constructor(public navCtrl: NavController,
     private alertCtrl: AlertController,
     private navParams: NavParams,
-    private loadingCtrl: LoadingController) {
+    private loadingCtrl: LoadingController,
+    private storage: Storage) {
   }
 
   showAlert() {
@@ -71,10 +74,13 @@ export class HomePage {
     loading.present();
   }
 
-  // ionViewCanEnter() {
-  //   let account = this.navParams.get('account');
-  //   let password = this.navParams.get('password');
-  //   return account == '1234' && password == '1234';
-  // }
+  ionViewCanEnter() {
+    return this.storage.get('userInfo').then((data) => {
+       return data.account == '1234' && data.password == '1234';
+    });
+    // let account = this.navParams.get('account');
+    // let password = this.navParams.get('password');
+    // return account == '1234' && password == '1234';
+  }
 
 }

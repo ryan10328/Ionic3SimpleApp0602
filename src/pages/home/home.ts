@@ -74,13 +74,13 @@ export class HomePage {
     loading.present();
   }
 
-  ionViewCanEnter() {
-    return this.storage.get('userInfo').then((data) => {
-       return data.account == '1234' && data.password == '1234';
-    });
-    // let account = this.navParams.get('account');
-    // let password = this.navParams.get('password');
-    // return account == '1234' && password == '1234';
-  }
+  // ionViewCanEnter() {
+  //   return this.storage.get('userInfo').then((data) => {
+  //      return data.account == '1234' && data.password == '1234';
+  //   });
+  //   // let account = this.navParams.get('account');
+  //   // let password = this.navParams.get('password');
+  //   // return account == '1234' && password == '1234';
+  // }
 
 }

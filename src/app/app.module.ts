@@ -1,3 +1,4 @@
+import { EventPage } from './../pages/event/event';
 import { StudentPage } from './../pages/student/student';
 import { CardPage } from './../pages/card/card';
 import { CheckPage } from './../pages/check/check';
@@ -29,7 +30,8 @@ import { IonicStorageModule } from '@ionic/storage';
     LoginPage,
     CheckPage,
     CardPage,
-    StudentPage
+    StudentPage,
+    EventPage
   ],
   imports: [
     BrowserModule,
@@ -54,7 +56,8 @@ import { IonicStorageModule } from '@ionic/storage';
     LoginPage,
     CheckPage,
     CardPage,
-    StudentPage
+    StudentPage,
+    EventPage
   ],
   providers: [
     StatusBar,

@@ -1,10 +1,11 @@
+import { EventPage } from './../pages/event/event';
 import { StudentPage } from './../pages/student/student';
 import { CardPage } from './../pages/card/card';
 import { LoginPage } from './../pages/login/login';
 import { MasterPage } from './../pages/master/master';
 import { HelloPage } from './../pages/hello/hello';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -17,12 +18,18 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // rootPage: any = HomePage;
-  rootPage: any = LoginPage;
+  rootPage: any = HomePage;
+  // rootPage: any = LoginPage;
 
   pages: Array<{ title: string, component: any }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+
+  count: number = 0;
+
+  constructor(public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    private events: Events) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -32,8 +39,16 @@ export class MyApp {
       { title: 'Hello', component: HelloPage },
       { title: 'Master', component: MasterPage },
       { title: 'Card', component: CardPage },
-      { title: 'Student', component: StudentPage }
+      { title: 'Student', component: StudentPage },
+      { title: 'Event', component: EventPage }
     ];
+
+    this.events.subscribe('on:add', () => {
+      this.count++;
+    });
+    this.events.subscribe('on:minus', () => {
+      this.count--;
+    });
 
   }
 

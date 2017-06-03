@@ -2,7 +2,7 @@ import { CheckPage } from './../check/check';
 import { ListPage } from './../list/list';
 import { MasterPage } from './../master/master';
 import { Component } from '@angular/core';
-import { NavController, AlertController, NavParams } from 'ionic-angular';
+import { NavController, AlertController, NavParams, LoadingController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -12,7 +12,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,
     private alertCtrl: AlertController,
-    private navParams: NavParams) {
+    private navParams: NavParams,
+    private loadingCtrl: LoadingController) {
   }
 
   showAlert() {
@@ -59,6 +60,15 @@ export class HomePage {
 
   goCheck() {
     this.navCtrl.push(CheckPage);
+  }
+
+  showLoading() {
+    let loading = this.loadingCtrl.create({
+      content: 'Loading...',
+      duration: 1500
+    });
+
+    loading.present();
   }
 
   // ionViewCanEnter() {

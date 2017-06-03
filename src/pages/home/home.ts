@@ -1,3 +1,4 @@
+import { CheckPage } from './../check/check';
 import { ListPage } from './../list/list';
 import { MasterPage } from './../master/master';
 import { Component } from '@angular/core';
@@ -54,6 +55,10 @@ export class HomePage {
 
   setRootPage() {
     this.navCtrl.setRoot(ListPage);
+  }
+
+  goCheck() {
+    this.navCtrl.push(CheckPage);
   }
 
   ionViewCanEnter() {

@@ -1,3 +1,4 @@
+import { CheckPage } from './../pages/check/check';
 import { LoginPage } from './../pages/login/login';
 import { MasterPage } from './../pages/master/master';
 import { HelloPage } from './../pages/hello/hello';
@@ -8,9 +9,10 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     HelloPage,
     MasterPage,
-    LoginPage
+    LoginPage,
+    CheckPage
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -32,7 +36,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     HelloPage,
     MasterPage,
-    LoginPage
+    LoginPage,
+    CheckPage
   ],
   providers: [
     StatusBar,

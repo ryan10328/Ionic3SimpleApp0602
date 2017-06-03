@@ -27,7 +27,13 @@ import { FormsModule } from "@angular/forms";
   imports: [
     BrowserModule,
     FormsModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {}, {
+      links: [
+        { component: LoginPage, name: 'Login', segment: 'login' },
+        { component: HomePage, name: 'Home', segment: 'myhome' },
+        { component: MasterPage, name: 'Master', segment: 'master/:name/:age' }
+      ]
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [

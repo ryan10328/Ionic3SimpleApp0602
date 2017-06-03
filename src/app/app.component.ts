@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { MasterPage } from './../pages/master/master';
 import { HelloPage } from './../pages/hello/hello';
 import { Component, ViewChild } from '@angular/core';
@@ -14,7 +15,8 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  // rootPage: any = HomePage;
+  rootPage: any = LoginPage;
 
   pages: Array<{ title: string, component: any }>;
 

@@ -1,7 +1,7 @@
 import { ListPage } from './../list/list';
 import { MasterPage } from './../master/master';
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -9,7 +9,9 @@ import { NavController, AlertController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController,
+    private alertCtrl: AlertController,
+    private navParams: NavParams) {
   }
 
   showAlert() {
@@ -52,6 +54,12 @@ export class HomePage {
 
   setRootPage() {
     this.navCtrl.setRoot(ListPage);
+  }
+
+  ionViewCanEnter() {
+    let account = this.navParams.get('account');
+    let password = this.navParams.get('password');
+    return account == '1234' && password == '1234';
   }
 
 }

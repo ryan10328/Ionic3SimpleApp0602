@@ -1,0 +1,22 @@
+<!--<ion-header>
+
+  <ion-navbar>
+    <ion-title>login</ion-title>
+  </ion-navbar>
+
+</ion-header>-->
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>帳號</ion-label>
+      <ion-input type="text" [(ngModel)]="account"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>密碼</ion-label>
+      <ion-input type="text" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button ion-button color="primary" block (click)="login()">登入</button>
+  </div>
+</ion-content>

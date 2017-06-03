@@ -1,3 +1,4 @@
+import { CardPage } from './../pages/card/card';
 import { LoginPage } from './../pages/login/login';
 import { MasterPage } from './../pages/master/master';
 import { HelloPage } from './../pages/hello/hello';
@@ -15,8 +16,8 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // rootPage: any = HomePage;
-  rootPage: any = LoginPage;
+  rootPage: any = HomePage;
+  // rootPage: any = LoginPage;
 
   pages: Array<{ title: string, component: any }>;
 
@@ -28,7 +29,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'Hello', component: HelloPage },
-      { title: 'Master', component: MasterPage }
+      { title: 'Master', component: MasterPage },
+      { title: 'Card', component: CardPage }
     ];
 
   }

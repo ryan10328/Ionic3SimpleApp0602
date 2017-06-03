@@ -1,3 +1,4 @@
+import { CardPage } from './../pages/card/card';
 import { CheckPage } from './../pages/check/check';
 import { LoginPage } from './../pages/login/login';
 import { MasterPage } from './../pages/master/master';
@@ -22,7 +23,8 @@ import { FormsModule } from "@angular/forms";
     HelloPage,
     MasterPage,
     LoginPage,
-    CheckPage
+    CheckPage,
+    CardPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { FormsModule } from "@angular/forms";
     HelloPage,
     MasterPage,
     LoginPage,
-    CheckPage
+    CheckPage,
+    CardPage
   ],
   providers: [
     StatusBar,

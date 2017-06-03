@@ -61,10 +61,10 @@ export class HomePage {
     this.navCtrl.push(CheckPage);
   }
 
-  ionViewCanEnter() {
-    let account = this.navParams.get('account');
-    let password = this.navParams.get('password');
-    return account == '1234' && password == '1234';
-  }
+  // ionViewCanEnter() {
+  //   let account = this.navParams.get('account');
+  //   let password = this.navParams.get('password');
+  //   return account == '1234' && password == '1234';
+  // }
 
 }

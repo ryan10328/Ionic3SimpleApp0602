@@ -1,3 +1,5 @@
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { BarcodePage } from './../pages/barcode/barcode';
 import { EventPage } from './../pages/event/event';
 import { StudentPage } from './../pages/student/student';
 import { CardPage } from './../pages/card/card';
@@ -31,7 +33,8 @@ import { IonicStorageModule } from '@ionic/storage';
     CheckPage,
     CardPage,
     StudentPage,
-    EventPage
+    EventPage,
+    BarcodePage
   ],
   imports: [
     BrowserModule,
@@ -57,11 +60,13 @@ import { IonicStorageModule } from '@ionic/storage';
     CheckPage,
     CardPage,
     StudentPage,
-    EventPage
+    EventPage,
+    BarcodePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })

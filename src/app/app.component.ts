@@ -1,3 +1,5 @@
+import { CameraPage } from './../pages/camera/camera';
+import { BarcodePage } from './../pages/barcode/barcode';
 import { EventPage } from './../pages/event/event';
 import { StudentPage } from './../pages/student/student';
 import { CardPage } from './../pages/card/card';
@@ -40,7 +42,9 @@ export class MyApp {
       { title: 'Master', component: MasterPage },
       { title: 'Card', component: CardPage },
       { title: 'Student', component: StudentPage },
-      { title: 'Event', component: EventPage }
+      { title: 'Event', component: EventPage },
+      { title: 'Barcode', component: BarcodePage },
+      { title: 'Camera', component: CameraPage }
     ];
 
     this.events.subscribe('on:add', () => {

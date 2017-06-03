@@ -1,3 +1,4 @@
+import { StudentPage } from './../pages/student/student';
 import { CardPage } from './../pages/card/card';
 import { CheckPage } from './../pages/check/check';
 import { LoginPage } from './../pages/login/login';
@@ -14,6 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { FormsModule } from "@angular/forms";
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { FormsModule } from "@angular/forms";
     MasterPage,
     LoginPage,
     CheckPage,
-    CardPage
+    CardPage,
+    StudentPage
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     IonicModule.forRoot(MyApp, {}, {
       links: [
         { component: LoginPage, name: 'Login', segment: 'login' },
@@ -46,7 +50,8 @@ import { FormsModule } from "@angular/forms";
     MasterPage,
     LoginPage,
     CheckPage,
-    CardPage
+    CardPage,
+    StudentPage
   ],
   providers: [
     StatusBar,

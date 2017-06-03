@@ -1,3 +1,4 @@
+import { StudentPage } from './../pages/student/student';
 import { CardPage } from './../pages/card/card';
 import { LoginPage } from './../pages/login/login';
 import { MasterPage } from './../pages/master/master';
@@ -30,7 +31,8 @@ export class MyApp {
       { title: 'List', component: ListPage },
       { title: 'Hello', component: HelloPage },
       { title: 'Master', component: MasterPage },
-      { title: 'Card', component: CardPage }
+      { title: 'Card', component: CardPage },
+      { title: 'Student', component: StudentPage }
     ];
 
   }
